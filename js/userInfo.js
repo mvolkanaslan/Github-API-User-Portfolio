@@ -1,5 +1,5 @@
 function setUserInfoToUI(userInfo){
-    userProfile.innerHTML="";
+    
     userProfile.insertAdjacentHTML("afterbegin",
     `
         <div class="card d-flex  justify-content-center mb-3 shadow-sm bg-body rounded">

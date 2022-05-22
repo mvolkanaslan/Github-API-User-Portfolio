@@ -1,16 +1,11 @@
 class githubApi{
-    // Getting User Bio Info's
-    static async getUserInformation(username){
-        let url = `https://api.github.com/users/${username}`;
-        let response = await fetch(url);
-        let userInfo = await response.json();
-        return userInfo;
-    }
-
-    static async getUserRepos(username){
-        let url = `https://api.github.com/users/${username}/repos`;
-        let response = await fetch(url);
-        let userRepos = await response.json();
-        return userRepos;
+    // Get User Data
+    static async getUserData(username){
+        let url = `https://api.github.com/users/`;
+        let responseInfo = await fetch(url+username);
+        let responseRepos = await fetch(url+username+"/repos");
+        user.info = await responseInfo.json();
+        user.repos = await responseRepos.json();
+        return user;
     }
 }

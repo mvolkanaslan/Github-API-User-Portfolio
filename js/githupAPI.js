@@ -1,5 +1,5 @@
 class githubApi{
-    // Get User Data
+    // Get User Data from API and set properties User object
     static async getUserData(username){
         let url = `https://api.github.com/users/`;
         let responseInfo = await fetch(url+username);
